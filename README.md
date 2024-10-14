@@ -1,19 +1,6 @@
 # seqdemu
 
-![Project Logo](link-to-logo.png)
-
-Under development
-
-## Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+SEQDEMU for the win!
 
 ## About
 
