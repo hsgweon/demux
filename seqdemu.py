@@ -94,7 +94,8 @@ def process_chunk(args):
                     result_F = boyer_moore_search_with_exact_mismatches(sequence, barcode_F, exact_mismatches)
                     result_RC = boyer_moore_search_with_exact_mismatches(sequence, barcode_RC, exact_mismatches)
 
-                    if len(result_F) == 1 and len(result_RC) == 1:
+                    if (len(result_F) == 1 and len(result_RC) == 1) and (result_F[0][0] < result_RC[0][0]): # If (the forward barcode is found once AND reverse barcode is found once) AND (the forward barcode is not found after the reverse barcode)
+
                         # output original sequence
                         temp_files_full[i].write(f">{record.description}\n{sequence}\n")
                         # output sequences with barcode intact
@@ -139,7 +140,7 @@ if __name__ == "__main__":
     progress_counter = manager.Value('i', 0)
     lock = manager.Lock()
 
-    # Barcodes
+    # Barcodes - deals with Forward-RC(Reverse) AND Reverse-RC(Forward)
     with open(options.barcodes, "r") as barcodes:
         for line in barcodes:
             parts = line.rstrip().split("\t")
