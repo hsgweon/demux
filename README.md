@@ -5,7 +5,7 @@ Under development
 
 ## About
 
-No nonse demultiplexer. 
+No nonse demultiplexer for nanopore sequences with custom barcodes.
 
 ## Features
 
