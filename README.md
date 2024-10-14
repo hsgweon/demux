@@ -1,6 +1,7 @@
 # seqdemu
 
-SEQDEMU for the win!
+Under development
+
 
 ## About
 
